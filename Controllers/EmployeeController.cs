@@ -1,6 +1,12 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using ReactUISQLServer.Models;
+
 
 namespace ReactUISQLServer.Controllers
 {
@@ -19,7 +25,7 @@ namespace ReactUISQLServer.Controllers
         [Route("Employees")]
         public IActionResult Employees()
         {
-            List<Employee> list = _dbContext.Employee.ToList();
+            List<Employee> list = _dbContext.Employees.ToList();
             return StatusCode(StatusCodes.Status200OK, list);
         }
 

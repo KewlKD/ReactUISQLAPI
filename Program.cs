@@ -4,7 +4,8 @@ using ReactUISQLServer.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<CompDBContext>();
+builder.Services.AddDbContext<CompDBContext>(
+    options => options.UseSqlServer("ConnectionStrings")); 
 
 
 builder.Services.AddControllersWithViews();

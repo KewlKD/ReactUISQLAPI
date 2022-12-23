@@ -1,12 +1,13 @@
-﻿namespace ReactUISQLServer.Models
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace ReactUISQLServer.Models
 {
-    public class Employee
+    public partial class Employee
     {
 
-        public int EmployeeId { get; set; }
-        public string EmployeeName { get; set; }
-        public string Department { get; set; }
-        public DateTime DateOfJoining { get; set; }
-        public string PhotoFileName { get; set; }
+        public int Employeeid { get; set; }
+        public string? EmployeeName { get; set; }
+        public string? EmployeeAdd { get; set; }
+        public string? EmployeeEmail { get; set; }
     }
 }
